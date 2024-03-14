@@ -8,7 +8,15 @@ class ScreenShot(http.server.BaseHTTPRequestHandler):
         self.send_header("Content-type", "multipart/x-mixed-replace; boundary=frame")
         self.end_headers()
 
-        
+        while True:
+
+            scrnsht = pyautogui.screenshot()
+
+            BinImg = io.BytesIO()
+            scrnsht.save(BinImg, format='PNG')
+            BinImg.seek(0)
+
+            
 
 HOST = '0.0.0.0'
 PORT = 8000
