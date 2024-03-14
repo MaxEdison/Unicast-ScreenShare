@@ -12,6 +12,18 @@
 </head>
 
 <body>
+    
+    <script>
+        
+        const url = 'http://0.0.0.0:8000/';
+        const Img = document.getElementById('screenshot');
+        function Update(){
+            Img.src = url;
+            setTimeout(Update, 500);
+        }
+        Update();
+        
+    </script>
 
     <img id="screenshot" alt="Screenshot" />
 
