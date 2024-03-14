@@ -1,0 +1,6 @@
+@echo off
+echo Opening Unicast in the default web browser...
+start "" "http://127.0.0.1:8000"
+echo Running main.py...
+python main.py
+pause
