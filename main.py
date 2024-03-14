@@ -18,10 +18,10 @@ class ScreenShot(http.server.BaseHTTPRequestHandler):
 
             self.wfile.write(b"--frame\r\n")
             self.send_header("Content-type", "image/png")
-            self.send_header("Content-length", len(img_byte_array.getvalue()))
+            self.send_header("Content-length", len(BinImg.getvalue()))
             self.end_headers()
-            
-            self.wfile.write(img_byte_array.getvalue())
+
+            self.wfile.write(BinImg.getvalue())
             self.wfile.write(b"\r\n")
 
 HOST = '0.0.0.0'
