@@ -30,3 +30,6 @@ PORT = 8000
 with socketserver.TCPServer((HOST, PORT), ScreenShot) as httpServer:
     print(f"Start HTTP server on {HOST}:{PORT}")
 
+    screenshot_thread = threading.Thread(target=httpd.serve_forever, daemon=True)
+    screenshot_thread.start()
+    screenshot_thread.join()
