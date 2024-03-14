@@ -1,5 +1,8 @@
 import http.server
 import socketserver
+import pyautogui
+import io
+import threading
 
 class ScreenShot(http.server.BaseHTTPRequestHandler):
     def GetReq(self):
