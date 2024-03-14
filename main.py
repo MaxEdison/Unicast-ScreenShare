@@ -3,9 +3,12 @@ import socketserver
 
 class ScreenShot(http.server.BaseHTTPRequestHandler):
     def GetReq(self):
-        pass
 
+        self.send_response(200)
+        self.send_header("Content-type", "multipart/x-mixed-replace; boundary=frame")
+        self.end_headers()
 
+        
 
 HOST = '0.0.0.0'
 PORT = 8000
